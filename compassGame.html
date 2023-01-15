@@ -1,0 +1,73 @@
+<DOCTYPE HTML>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Fiona Kennedy">
+<link rel="stylesheet" href="style.css">
+<title>Compass Game</title>
+</head>
+
+<body>
+<div id="gameBody">
+<h1>Compass Game</h1>
+<p>The direction letters on the "compass" are scrambled. Press the arrows to properly position the direction letters.</p>
+
+<table>
+	<tr><td><input type="button"
+		value="&#8596;"
+		class="diagonal blue"
+		onclick="swapTopLeft()"></td>
+	<td id="top" /><td> </td></tr>
+	<tr><td id="left"/>
+	<td><input type="button"
+		value="&#8596;"
+		class="blue"
+		onclick="swapLeftRight()"></td>
+	<td id="right" /></tr>
+	<tr><td> </td><td id="bottom"/><td>	
+	<input type="button"
+		value="&#8596;"
+		class="diagonal blue"
+		onclick="swapBottomRight()"></td></tr>
+</table>
+
+<p>To restart the game, press <i>Restart</i>, enter N, S, E, W in any order in the boxes below, and then press <i>Update</i>.</p>
+
+	<input type="button"
+		value="Restart"
+		onclick="restart()">
+		
+	<form name="myForm" class="padded">
+		Top:
+			<input id="topBox" type="text" maxlength="1" size="1">
+		Left:
+			<input id="leftBox" type="text" maxlength="1" size="1">
+		Right:
+			<input id="rightBox" type="text" maxlength="1" size="1">
+		Bottom:
+			<input id="bottomBox" type="text" maxlength="1" size="1">
+	</form>
+		
+	<input type="button"
+		value="Update"
+		onclick="update()">
+</div>	
+
+	<div id="warningBody" class="warning">
+		<p>Can't play! Javascript not enabled!</p>
+	</div>
+		
+</body>
+
+<script src="compass.js">
+</script>
+
+<noscript>
+    <style>
+        #gameBody {display:none;}
+		#warningBody {display:initial;}
+    </style>
+</noscript>
+
+</html>

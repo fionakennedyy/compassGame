@@ -1,0 +1,26 @@
+.diagonal {
+	transform: rotate(-45deg);
+}
+
+td {
+	width: 50pt;
+	height: 50pt;
+	text-align: center;
+	font-size: 24px;
+	color: red;
+	font-weight: bold;
+}
+
+.warning {
+	display: none;
+}
+
+.blue {
+	color: blue;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.padded {
+	padding-top: 25px;
+}
